@@ -11,6 +11,10 @@ var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var mongourl = process.env.MONGOLAB_URI;
 
+app.get('/', function(req,res){
+    res.sendFile(path.join(__dirname +'/intro.html'));
+})
+
 MongoClient.connect(mongourl, function (err, db) {
   if (err) {
     console.log('Unable to connect to the mongoDB server. Error:', err);
