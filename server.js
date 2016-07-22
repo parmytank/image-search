@@ -85,8 +85,9 @@ MongoClient.connect(mongourl, function (err, db) {
             });
     });
     
-    app.listen(process.env.PORT, process.env.IP);
+    
   }
 });
+app.listen(process.env.PORT, process.env.IP);
 
 
